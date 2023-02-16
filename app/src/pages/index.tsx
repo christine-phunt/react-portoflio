@@ -1,10 +1,8 @@
-import { Heading, Text } from '@chakra-ui/react';
+import React from 'react';
+import { Flex } from '@chakra-ui/react';
 
-export default function Home() {
-  return (
-    <main>
-      <Heading color="red">Hello TypeScript!</Heading>
-      <Text>A TypeScript starter for Gatsby. Great for advanced users.</Text>
-    </main>
-  );
-}
+const IndexPage: React.FC = (props) => {
+  return <Flex w="100%" direction="column"></Flex>;
+};
+
+export default IndexPage;

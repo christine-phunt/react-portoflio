@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+    app:
+        build: ./app # Looks for the Dockerfile within the working directory (./app)
+        container_name: react-portoflio
+        volumes:
+            - ./app/src:/usr/src/app/src # Mounts the host folder(s) onto the docker container for live development, only src file needed for Gatsby
+            - /usr/src/app/node_modules # Saves the node modules so it does not have to re-install
+        ports:
+            - "8000:8000"
+        environment:
+            NODE_ENV: $NODE_ENV
+            GATSBY_WEBPACK_PUBLICPATH: /
+            GATSBY_TELEMETRY_DISABLED: 1
+        env_file:
+            - .env
