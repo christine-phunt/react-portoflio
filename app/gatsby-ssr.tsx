@@ -5,6 +5,9 @@ import { ChakraProvider } from '@chakra-ui/react';
 import theme from './src/theme';
 import './src/global.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 const wrapPageElement: GatsbySSR['wrapPageElement'] = ({ element }) => {
   return (
     <ChakraProvider theme={theme} resetCSS>
